@@ -1,0 +1,34 @@
+
+[user]
+        name = liyang
+        email = xxxx@xqq.com
+[alias]
+        lg = log --oneline --graph
+        co = checkout
+        br = branch
+        cp = cherry-pick
+        st = status
+        df = diff
+        rb = rebase
+        ci = commit
+        nr = name-rev
+        log = log --abbrev-commit
+[http]
+        sslverify = false
+#       proxy = xxxx
+[https]
+#       proxy = https://xxx
+
+[http "http://rnd-isourceb.huawei.com"]
+        proxy =
+        sslVerify = false
+[http "http://code.huawei.com"]
+        proxy =
+        sslVerify = false
+[sendemail]
+        smtpserverport = 25
+        smtpuser = l00472308
+        confirm = always
+        smtpserver = smtpscn.huawei.com
+        suppresscc = all
+~
