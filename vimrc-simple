@@ -1,0 +1,60 @@
+set nu
+"set laststatus=2  "show status pane
+set statusline+=%F  "show full file name
+set hlsearch>--->-------"search highlight
+set encoding=utf-8
+set nowrap
+
+""""""""""""""""""""""""""""""""""""Tlist & ctags & cscope start""""""""""""""""""""""""""""""""""""""""
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+"let Tlist_Sort_Type="name"
+"let Tlist_WinWidth=30
+"
+""iabbrev tl Tlist
+map <silent> <F8> :TlistToggle<cr>
+
+set autochdir
+set tags=tags;
+if has("cscope")
+>-------set csprg=/usr/bin/cscope
+>-------set csto=1
+>-------set cst
+>-------set nocsverb
+" add any database in current directory
+if filereadable("cscope.out")
+cs add cscope.out
+endif
+set csverb
+endif
+
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+""""""""""""""""""""""""""""""""""""Tlist end""""""""""""""""""""""""""""""""""""""""
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+
+""""""""""""""""""""""""""""""""""""Project start""""""""""""""""""""""""""""""""""""""""
+
+setlocal cindent
+setlocal cinoptions=:0,l1,t0,t0,(0
+set autoindent
+
+set noexpandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set ts=8
+
+set listchars=tab:>-,trail:-,extends:#,nbsp:-
+set list
+
+""""""""""""""""""""""""""""""""""""Project end""""""""""""""""""""""""""""""""""""""""
