@@ -3,3 +3,4 @@
 - bash
 - tmux
 - git
+- zsh + oh-my-zsh
