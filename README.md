@@ -4,3 +4,4 @@
 - tmux
 - git
 - zsh + oh-my-zsh
+- ctags + cscope
