@@ -19,16 +19,16 @@
 [https]
 #       proxy = https://xxx
 
-[http "http://rnd-isourceb.huawei.com"]
+[http "http://xx.com"]
         proxy =
         sslVerify = false
-[http "http://code.huawei.com"]
+[http "http://xx.com"]
         proxy =
         sslVerify = false
 [sendemail]
         smtpserverport = 25
-        smtpuser = l00472308
+        smtpuser = xx
         confirm = always
-        smtpserver = smtpscn.huawei.com
+        smtpserver = smtpscn.xx.com
         suppresscc = all
 ~
